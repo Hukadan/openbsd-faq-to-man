@@ -1,0 +1,471 @@
+.Dd $Mdocdate: March 4 2020 $
+.Dt FAQ-INTRO 7
+.Os
+.Sh NAME
+.Nm faq-intro
+.Nd introduction to OpenBSD
+.Sh ABOUT OPENBSD 
+The
+.Lk https://www.openbsd.org/index.html OpenBSD
+project produces a freely available, multi-platform
+4.4BSD-based UNIX-like operating system.
+Our goals place emphasis on correctness, security,
+standardization, and portability.  
+.Ss Why might I want to use it?  
+Some reasons why we think OpenBSD is a useful operating
+system:
+.Bl -bullet -compact
+.It
+OpenBSD runs on many different hardware platforms.
+.It 
+OpenBSD is thought of as the most
+.Lk https://www.openbsd.org/security.html secure
+UNIX-like operating system by many security professionals,
+as a result of the never-ending comprehensive source code
+audit.
+.It
+OpenBSD is a full-featured UNIX-like operating system
+available in source and binary form at no charge.
+.It
+OpenBSD integrates cutting-edge security technology suitable
+for building firewalls and private network services in a
+distributed environment.
+.It
+OpenBSD benefits from strong ongoing development in many
+areas, offering opportunities to work with emerging
+technologies and an international community of developers
+and end users.
+.It 
+OpenBSD attempts to minimize the need for customization and
+tweaking.
+For the vast majority of users, OpenBSD just works on their
+hardware for their application.
+.El
+.Ss Is OpenBSD really free?  
+.Pp 
+OpenBSD is all free.
+The binaries are free.
+The source is free.
+All parts of OpenBSD have reasonable copyright terms
+permitting free redistribution.
+More about OpenBSD's copyright policy can be found here.  
+.Pp 
+The maintainers of OpenBSD support the project largely from
+their own pockets.
+This includes the time spent programming for the project,
+equipment used to support the many ports, network resources
+used to distribute OpenBSD to you, and the time spent
+answering questions and investigating users' bug reports.
+The OpenBSD developers are not independently wealthy, and
+even small contributions of time, equipment and resources
+make a big difference.
+.Ss What's included in the base system?  
+.Pp
+OpenBSD is distributed with a number of third-party software
+products, including: 
+.Bl -bullet -compact
+.It
+.Lk https://www.x.org/wiki X.org
+.It
+.Lk https://clang.llvm.org LLVM/Clang
+.It
+.Lk https://gcc.gnu.org GCC
+.It
+.Lk https://www.perl.org Perl 
+.It
+.Lk https://www.nlnetlabs.nl/projects/nsd NSD
+and
+.Lk https://www.nlnetlabs.nl/projects/unbound Unbound 
+.It
+.Lk https://www.gnu.org/software/ncurses ncurses
+.It
+.Lk https://www.gnu.org/software/binutils binutils 
+.It
+.Lk https://www.gnu.org/software/gdb/gdb.html gdb 
+.El
+.Pp
+The OpenBSD team often patches third party products,
+typically to improve the security or quality of the code.
+Much 
+.Lk https://www.openbsd.org/innovations.html home-grown software
+is also included.
+Additional applications are available as 
+.Xr faq-packages 7 .
+.Ss  Why is/isn't ProductX included? 
+People often ask why a particular product is or isn't
+included with OpenBSD.
+The answer is based on two things: the wishes of the
+developers and compatibility with the
+.Lk https://www.openbsd.org/goals.html goals
+of the project.
+Licensing is often the biggest problem: we want OpenBSD to
+remain usable by any person anywhere in the world for any
+purpose.
+.Ss When is the next release? 
+The OpenBSD team makes a new release approximately every six
+months, with the target release dates in May and November.
+More information on the development cycle can be found
+.Lk https://www.openbsd.org/faq/faq5.html#Flavors here .  
+.Sh HARDWARE SUPPORT 
+OpenBSD runs on the following platforms: 
+.Bl -bullet -compact
+.It
+.Lk https://www.openbsd.org/alpha.html alpha
+.It
+.Lk https://www.openbsd.org/amd64.html amd64 
+.It
+.Lk https://www.openbsd.org/arm64.html arm64
+.It
+.Lk https://www.openbsd.org/armv7.html armv7
+.It
+.Lk https://www.openbsd.org/hppa.html hppa
+.It
+.Lk https://www.openbsd.org/i386.html i386
+.It
+.Lk https://www.openbsd.org/landisk.html landisk
+.It
+.Lk https://www.openbsd.org/loongson.html loongson
+.It
+.Lk https://www.openbsd.org/luna88k.html luna88k
+.It
+.Lk https://www.openbsd.org/macppc.html macppc
+.It
+.Lk https://www.openbsd.org/octeon.html octeon
+.It
+.Lk https://www.openbsd.org/sparc64.html sparc64
+.El
+.Pp
+Specific hardware support details are on the respective
+platform pages.
+.Sh MANUAL PAGES
+.Pp
+OpenBSD comes with extensive documentation in the form of
+man pages.
+They are the authoritative source of information for
+OpenBSD, and considerable effort is made to ensure they're
+up to date and accurate.
+Developers making a change to the system are expected to
+update the man pages along with their change to the system
+code.
+It is expected that users will check the man pages before
+asking for help.
+.Pp
+Here is a list of some useful manual pages for new users:
+.Bl -bullet -compact
+.It
+.Xr afterboot 8 
+\- things to check after the first complete boot.
+.It
+.Xr help 1
+\- help for new users and administrators.
+.It
+.Xr hier 7
+\- layout of filesystems. 
+.It
+.Xr man 1 
+\- display the manual pages.
+.It
+.Xr adduser 8 
+and
+.Xr rmuser 8 
+\- add or remove new users.
+.It 
+.Xr reboot 8
+, 
+.Xr halt 8
+and
+.Xr shutdown 8
+\- stop and restart the system.
+.It
+.Xr syspatch 8
+\- apply security and reliability updates.
+.It
+.Xr sysupgrade 8
+\- upgrade to the next OpenBSD release or a newer snapshot.
+.It
+.Xr dmesg 8
+\- redisplay the kernel boot messages.
+.It
+.Xr doas 1
+\- run commands as another user.
+.It
+.Xr tmux 1
+\- terminal multiplexer.
+.It 
+.Xr ifconfig 8
+\- configure network interface parameters.
+.It
+.Xr ftp 1
+\- download files from the internet (supports
+FTP/HTTP/HTTPS).
+.It
+.Xr login.conf 5
+\- format of the login class configuration file.
+.It
+.Xr sendbug 1
+\- report a bug you've found.
+.El
+.Pp
+You can find all the OpenBSD man pages on the web at
+.Lk https://man.openbsd.org/ man.openbsd.org
+as well as on your computer if you installed the manXX.tgz
+file set.
+.Pp
+In general, if you know the name of a command or a manual
+page, you can read it by executing man command.
+If you don't know the name of the command, or if man command
+doesn't find the manual page, you can search the manual page
+database by executing 
+.Ql apropos something 
+or 
+.Ql man -k something
+, where
+.Ql something
+is a likely word that might appear in the title of the
+manual page you're looking for.
+.Bd -literal -offset indent -compact
+$ apropos "time zone"
+tzfile(5) - time zone information
+zdump(8) - time zone dumper 
+zic(8) - time zone compiler 
+.Ed
+.Pp 
+The parenthetical numbers indicate the section of the manual
+in which that page can be found.
+In some cases, you may find manual pages with identical
+names living in separate sections of the manual.
+For example, assume that you want to know the format of the
+configuration files for the cron daemon.
+Once you know the section of the manual for the page you
+want, you would execute
+.Ql man n 
+command, where 
+.Ql n 
+is the manual section number.
+.Bd -literal -offset indent -compact
+$ man -k
+cron cron(8) - clock daemon
+crontab(1) - maintain crontab files for individual users
+crontab(5) - tables for driving cron
+$ man 5 crontab
+.Ed
+.Sh MAILING LISTS
+The OpenBSD project maintains several mailing lists that
+users can subscribe to and follow. Some of the more popular
+lists are:
+.Bl -bullet -compact
+.It
+announce \- Announcements and security advisories.
+.It
+bugs \- Bugs received via
+.Xr sendbug 1
+and discussion about them.
+.It
+misc \- General user questions and answers.
+This is the most active list, and should be the "default"
+for most questions and discussion.
+.It
+ports \- Discussion of the 
+.Lk https://www.openbsd.org/faq/ports/ports.html "ports tree".
+.It
+source-changes \- Automated mailing of CVS source tree
+changes.
+Every time a developer commits a change to the OpenBSD
+source, xenocara or www tree, CVS will send out a copy of
+the commit message via this list.
+.It
+tech \- Discussion of technical topics for OpenBSD
+developers and advanced users.  
+.El
+.Pp
+Before posting a question on any mailing list, please check
+the archives for most common questions have been asked
+repeatedly.
+While it might be the first time you have encountered the
+problem or question, others on the mailing lists may have
+seen the same question several times in the last week, and
+may not appreciate seeing it again.
+If asking a question possibly related to hardware, always
+include a full 
+.Xr dmesg 8 .
+.Pp
+You can find several archives, other guidelines and more information
+on the mailing list page.
+Subscriptions can be easily managed via the web interface.
+
+.Sh MIGRATING TO OPENBSD
+If you learned Unix from any of the
+.Lk https://www.openbsd.org/books.html good books
+on general Unix, understanding the Unix philosophy and then extending
+your knowledge to a particular platform, you will find OpenBSD to be
+familiar.
+.Pp
+Here are some of the commonly encountered differences
+between OpenBSD and other Unix variants.
+.Bl -bullet -compact
+.It
+OpenBSD is a BSD-style Unix, following the 4.4BSD design closely.
+Linux and Solaris are System V style systems.
+Some Unix-like operating systems mix System V and BSD
+characteristics.
+A common place where this causes confusion is the 
+.Lk https://www.openbsd.org/faq/faq10.html#rc \
+"startup scripts" .
+OpenBSD uses the 
+.Xr rc 8
+system.
+.It
+OpenBSD is a complete system, intended to be kept in sync.
+It is not a kernel plus utilities that can be upgraded
+separately from each other.
+.It
+OpenBSD maintains a ports tree to provide third party
+software.
+Pre-compiled packages are created and distributed by the
+OpenBSD ports team.
+.It
+OpenBSD uses CVS to keep track of source code changes.
+OpenBSD pioneered anonymous CVS, which allows anyone to
+extract the full source tree for any version of OpenBSD at any time.
+There also is a web interface.
+.It
+OpenBSD has gone through heavy and continual security
+auditing to ensure the quality and security of the code.
+OpenBSD does not support journaling filesystems.
+Instead we use the soft updates feature of the Fast File
+System (FFS).
+.It
+OpenBSD comes with 
+.Lk https://www.openbsd.org/faq/pf/index.html \
+"Packet Filter (PF)" .
+This means that Network Address Translation, queuing, and
+filtering are handled through
+.Xr pfctl "8",
+.Xr pf 4
+and
+.Xr pf.conf 5 .
+.It
+OpenBSD's default shell is
+.Xr ksh "1",
+which is based on the public domain Korn shell.
+Shells such as bash and many others can be added from
+packages.
+.It
+Devices are named by driver, not by type.
+In other words, there are no eth0 and eth1 devices.
+It would be em0 for an Intel PRO/1000 Ethernet card, bge0
+for a Broadcom BCM57xx or BCM590x Ethernet device, ral0 for
+a RaLink wireless device, etc.
+.It
+OpenBSD/i386, amd64, and several other platforms use a
+two-layer disk partitioning system, where the first layer is
+the 
+.Lk https://www.openbsd.org/faq/faq14.html#fdisk fdisk
+BIOS-visible partition and the second is the disklabel.
+.It
+Some other operating systems encourage you to customize your
+kernel for your machine.
+OpenBSD users are encouraged to simply use the standard
+GENERIC kernel provided and tested by the developers.
+.Sh REPORTING BUGS
+Reporting bugs is one of the most important responsibilities
+of end users.
+Very detailed information is required to diagnose most
+serious issues.
+For example, the following would be an appropriate bug
+report:
+.Bd -literal -offset indent -compact
+From:
+user@example.com To: bugs@openbsd.org Subject: 3.3-beta panics on a
+SPARCStation2
+
+OpenBSD 3.2 installed from an official CD-ROM installed and ran fine
+on this machine.
+
+After doing a clean install of 3.3-beta from a mirror, I find the
+system randomly panics after a period of use, and predictably and
+quickly when starting X.
+
+This is the dmesg output:
+
+[...]
+
+This is the panic I got when attempting to start X:
+
+panic: pool_get(mclpl): free list modified: magic=78746572; page
+0xfaa93000; item addr 0xfaa93000 Stopped at      Debugger+0x4:   jmpl
+[%o7 + 0x8], %g0 https://www.openbsd.org/ddb.html describes the
+minimum info required in bug reports. Insufficient info makes it
+difficult to find and fix bugs.  ddb> trace [...]
+
+Thank you!
+.Ed
+.Pp
+See 
+.Lk https://www.openbsd.org/report.html "this page"
+for more information on creating and submitting bug reports.
+Include detailed information about what happened, the exact
+configuration of your system, and how to reproduce the
+problem.
+Please use
+.Xr sendbug 1
+to report your problems whenever possible.
+Otherwise, please include at least the
+.Xr dmesg 8
+output of your system.
+The
+.Xr sendbug 1
+command requires that your system be able to send email.
+.Pp
+The OpenBSD mail server uses
+.Xr spamd 8
+for greylisting, so it may take half an hour or so before
+the mail server accepts your bug report.
+Please be patient.
+.Pp
+After submitting a bug report, you may be contacted by
+developers for additional information or with patches that
+need testing.
+You can also monitor the archives of the
+.Mt bugs@openbsd.org
+mailing list \- details on the
+.Lk https://www.openbsd.org/mail.html "mailing list page" .
+.Sh SUPPORTING THE PROJECT
+We are greatly indebted to the people and organizations that
+have contributed to the OpenBSD project.
+OpenBSD has a constant need for several types of support
+from the community.
+If you find OpenBSD useful, you are strongly encouraged to
+find a way to contribute.
+.Bl -bullet -compact
+.It
+.Lk https://www.openbsd.org/donations.html "Donate money".
+The project has a constant need for cash to pay for
+equipment, network connectivity, etc.
+Even small donations make a profound difference.
+.It
+.Lk https://www.openbsd.org/want.html "Donate equipment and parts".
+The project has a constant need for general and specific
+hardware.
+.It
+.Lk https://www.openbsd.org/faq/faq5.html#Diff "Donate \
+your time and skills" .
+Programmers who enjoy writing operating systems are
+naturally always welcome, but there are many other ways that
+people can be useful.
+.It
+Follow the
+.Lk https://www.openbsd.org/mail.html mailing lists
+and help answer questions from other users.
+.It
+Help maintain documentation by submitting new FAQ material to
+.Mt "misc@openbsd.org".
+Form a local
+.Lk https://www.openbsd.org/groups.html user group
+and get your friends hooked on OpenBSD.
+.It
+Make a case to your employer for using OpenBSD at work.
+If you're a student, talk to your professors about using
+OpenBSD as a learning tool for Computer Science or
+Engineering courses.
+.El
